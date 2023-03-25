@@ -9,6 +9,8 @@ DEVICE_PATH := device/xiaomi/lancelot
 # Inherit from mt6768-common
 -include device/xiaomi/mt6768-common/BoardConfigCommon.mk
 
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := lancelot,galahad,shiva
 
