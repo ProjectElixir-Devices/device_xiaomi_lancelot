@@ -13,4 +13,8 @@ git clone --depth 1 https://github.com/LineageOS/android_hardware_lineage_compat
 git clone --depth 1 https://github.com/mt6768-dev/android_packages_apps_MtkFMRadio packages/apps/MtkFMRadio
 echo 'Cloning done' 
 
+ echo 'Patching'
+ cd frameworks/base && wget https://raw.githubusercontent.com/sarthakroy2002/random-stuff/main/Patches/Fix-brightness-slider-curve-for-some-devices-a12l.patch 
+ patch -p1 < *.patch && cd -
+
 echo 'Completed, proceeding to lunch'
